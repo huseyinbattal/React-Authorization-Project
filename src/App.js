@@ -1,25 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import Login from './Login';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+const userInfo = {
+  name: "Chuck Norris",
+  mail: "gmail@chucknorris.com",
+  imgURL:
+      "https://i.pinimg.com/originals/e3/94/47/e39447de921955826b1e498ccf9a39af.png",
+  phone: "+918 372 574",
+  password:"123456"
+}
+
+class App extends React.Component {
+  render() {
+    return (
+      <Login user={userInfo}/>
+    );
+  }
 }
 
 export default App;
